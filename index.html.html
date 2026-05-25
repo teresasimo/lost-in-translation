@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lost in Translation, Found in Conversation — Teresa Simone</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --gold:#C8952A;--gold-bg:#FDF6E9;--gold-border:#E8D5A0;
+  --dark:#1A1612;--mid:#4A4540;--soft:#F4F1EC;--white:#ffffff;
+  --max:680px;
+}
+body{font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);max-width:var(--max);margin:0 auto;padding:0 24px;}
+
+/* HERO */
+.hero{padding:72px 0 56px;text-align:center;border-bottom:1px solid #E8E4DC;}
+.overline{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:24px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(34px,7vw,54px);font-weight:900;line-height:1.06;color:var(--dark);margin-bottom:10px;}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.rule{width:36px;height:2px;background:var(--gold);margin:28px auto;}
+.hero-sub{font-size:17px;color:var(--mid);line-height:1.7;max-width:480px;margin:0 auto 32px;font-family:'Playfair Display',serif;font-style:italic;}
+.hero-meta{font-size:13px;color:#8A8480;margin-bottom:36px;letter-spacing:0.04em;}
+.btn{display:inline-block;background:var(--gold);color:var(--white);font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:17px 44px;border-radius:2px;text-decoration:none;cursor:pointer;}
+.btn:hover{background:#D4A84B;}
+
+/* SECTIONS */
+section{padding:64px 0;}
+section+section{border-top:1px solid #E8E4DC;}
+h2{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,34px);font-weight:700;line-height:1.2;color:var(--dark);margin-bottom:20px;text-align:center;}
+p{font-size:16px;color:var(--mid);line-height:1.8;margin-bottom:16px;text-align:center;}
+p strong{color:var(--dark);font-weight:500;}
+p em{font-style:italic;}
+
+/* QUOTE */
+.quote-wrap{padding:48px 0 40px;}
+.quote-card{border-left:3px solid var(--gold);padding:24px 28px;background:var(--gold-bg);}
+.quote-card blockquote{font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:var(--dark);line-height:1.6;margin-bottom:12px;}
+.quote-card cite{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
+
+/* OPENING SCENE */
+.scene{background:var(--soft);margin:0 -24px;padding:64px 24px;}
+.scene p{text-align:left;font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--mid);line-height:1.85;max-width:600px;margin:0 auto 20px;}
+.scene p:last-child{margin-bottom:0;}
+.scene strong{font-style:normal;color:var(--dark);}
+
+/* THEME PILLS */
+.pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:28px 0;}
+.pill{font-size:13px;color:var(--mid);background:var(--white);border:1px solid #DDD8CC;border-radius:100px;padding:8px 18px;}
+
+/* CHAPTERS */
+.chapters{display:flex;flex-direction:column;gap:16px;margin-top:32px;}
+.chapter{background:var(--soft);border-radius:3px;padding:24px 28px;}
+.ch-label{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:8px;}
+.chapter h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--dark);margin-bottom:8px;}
+.chapter p{font-size:14px;color:var(--mid);line-height:1.65;text-align:left;margin:0;}
+
+/* RESEARCH BOX */
+.research-box{background:var(--gold-bg);border:1px solid var(--gold-border);border-radius:3px;padding:28px 32px;margin:32px 0;text-align:left;}
+.research-box .rl{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:12px;}
+.research-box p{text-align:left;font-size:15px;color:var(--mid);margin-bottom:0;line-height:1.75;}
+
+/* WHO */
+.who-box{background:var(--soft);margin:0 -24px;padding:64px 24px;}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px;}
+.who-card{background:var(--white);border:1px solid #E8E4DC;border-radius:3px;padding:20px;}
+.who-card p{font-size:14px;color:var(--mid);text-align:left;margin:0;line-height:1.65;}
+
+/* AUTHOR */
+.author-section{padding:64px 0;text-align:center;}
+.author-name{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--dark);margin-bottom:6px;}
+.author-title{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;}
+.thesis-badge{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold-border);border-radius:2px;padding:12px 20px;font-size:13px;color:var(--mid);font-style:italic;margin-bottom:24px;max-width:500px;}
+
+/* PRICING */
+.pricing{background:var(--dark);margin:0 -24px;padding:72px 24px;text-align:center;}
+.pricing h2{color:var(--white);}
+.pricing p{color:#9A9690;}
+.price{font-family:'Playfair Display',serif;font-size:58px;font-weight:900;color:var(--gold);margin:28px 0 8px;}
+.price-note{font-size:13px;color:#666;margin-bottom:32px;}
+.tagline{font-size:15px;font-style:italic;color:#666;margin-top:20px !important;font-family:'Playfair Display',serif;}
+
+@media(max-width:480px){.who-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="overline">Culture · Conflict · Belonging</p>
+  <h1>Lost in Translation,<br><em>Found in Conversation</em></h1>
+  <div class="rule"></div>
+  <p class="hero-sub">How cultures shape conflict, emotion, and belonging in international environments</p>
+  <p class="hero-meta">PDF · Instant download · Read in one sitting</p>
+  <a href="https://payhip.com/b/PMjqB" class="btn">Get the book: €19,99</a>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-wrap">
+  <div class="quote-card">
+    <blockquote>"The most essential thing to understand about cross-cultural communication is that the words are never enough."</blockquote>
+    <cite>Erin Meyer</cite>
+  </div>
+</div>
+
+<!-- OPENING SCENE -->
+<div class="scene">
+  <p>"There was never a moment when Denmark openly rejected me. Nobody told me I was too emotional, too intense, too expressive, too much. Nobody excluded me from the table."</p>
+  <p>"And yet, slowly, almost imperceptibly, I began to feel that certain parts of me created tension the moment they entered a room."</p>
+  <p><strong>Not conflict in the obvious sense. Something quieter than that.</strong></p>
+</div>
+
+<!-- WHAT THIS BOOK IS REALLY ABOUT -->
+<section>
+  <h2>This is not a communication guide</h2>
+  <p>Most books about cross-cultural communication teach you what to say differently. This one asks a harder question: <em>what happens to people when the emotional rules of the culture around them are completely different from the ones they grew up with?</em></p>
+  <p>What happens when harmony becomes a moral obligation? When visible emotion is treated as instability? When belonging is possible, but only at the cost of becoming smaller?</p>
+  <p>This book was born from nearly twenty years of living between Italy and Denmark, and from academic research into the psychological cost of cultural adaptation. It is not theoretical. It is written from the inside.</p>
+  <p><strong>It is about the invisible emotional rules that shape what people feel allowed to say, express, reveal, or suppress inside international environments.</strong></p>
+</section>
+
+<!-- THE SCANDINAVIAN PARADOX -->
+<section style="border-top:1px solid #E8E4DC;">
+  <h2>The paradox at the heart of the book</h2>
+  <p>Denmark is consistently ranked among the happiest countries in the world. It also has some of the highest levels of chronic depression in Europe, concentrated precisely in the working-age population.</p>
+  <p>The contradiction is not accidental. It is cultural.</p>
+  <p>When harmony becomes a social obligation, conflict does not disappear. It goes underground. It becomes silence, withdrawal, emotional containment, quiet resentment, and conversations that never fully happen aloud.</p>
+
+  <div class="research-box">
+    <p class="rl">From the research</p>
+    <p>The anthropologist Ernesto De Martino described what he called "objectless fury", explosive rage appearing in societies of high welfare and strong social consensus. His insight: fury does not erupt only where order is absent. It can also erupt where order is so complete that it leaves no symbolic space for the release of tension. The crisis is not the failure of the system. It is the consequence of its success.</p>
+  </div>
+
+  <p>This is not a criticism of Scandinavian culture. It is a way of understanding how invisible emotional rules shape every interaction, and what that means for the people who live and work inside them.</p>
+</section>
+
+<!-- THEMES -->
+<section>
+  <h2>What the book explores</h2>
+  <div class="pills">
+    <span class="pill">The conflict beneath harmony</span>
+    <span class="pill">Why directness and emotional avoidance coexist</span>
+    <span class="pill">The stories cultures teach us to see</span>
+    <span class="pill">The hidden cost of adaptation</span>
+    <span class="pill">Belonging without disappearing</span>
+    <span class="pill">The OSCP framework for difficult conversations</span>
+    <span class="pill">Integration vs. self-erasure</span>
+    <span class="pill">What remains unspoken in international teams</span>
+  </div>
+</section>
+
+<!-- CHAPTERS -->
+<section>
+  <h2>Inside the book</h2>
+  <div class="chapters">
+    <div class="chapter">
+      <p class="ch-label">Introduction</p>
+      <h3>The tension underneath</h3>
+      <p>The experience of feeling like "too much" without anyone ever saying so. How the absence of visible conflict is not the same as the absence of suffering.</p>
+    </div>
+    <div class="chapter">
+      <p class="ch-label">Chapter 1</p>
+      <h3>The Conflict Beneath the Surface</h3>
+      <p>When harmony becomes a social obligation, hygge, Janteloven, fællesskab, and what they cost the people who live inside them and around them.</p>
+    </div>
+    <div class="chapter">
+      <p class="ch-label">Chapter 2</p>
+      <h3>The Directness Paradox</h3>
+      <p>Why Scandinavian cultures can feel brutally direct professionally and deeply conflict-avoidant emotionally. And why that combination disorients almost everyone who encounters it.</p>
+    </div>
+    <div class="chapter">
+      <p class="ch-label">Chapter 3</p>
+      <h3>The Stories Culture Teaches Us to See</h3>
+      <p>Why the same behaviour feels completely different across cultures, and how interpretations harden into conflict before anyone realises what is happening.</p>
+    </div>
+    <div class="chapter">
+      <p class="ch-label">Chapter 4</p>
+      <h3>Navigating Emotional Conflict</h3>
+      <p>The OSCP framework for difficult conversations across cultures. Practical, grounded in psychology, and calibrated for the emotional complexity of real international environments.</p>
+    </div>
+    <div class="chapter">
+      <p class="ch-label">Chapter 5</p>
+      <h3>The Hidden Cost of Adaptation</h3>
+      <p>The difference between integration and self-erasure. What happens when belonging requires continuously becoming smaller, and why healthy cross-cultural life cannot depend entirely on one side adapting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO FOR -->
+<div class="who-box">
+  <h2>Who this is for</h2>
+  <div class="who-grid">
+    <div class="who-card"><p>Internationals living and working in Denmark, Scandinavia, or Northern Europe who feel something they cannot yet name</p></div>
+    <div class="who-card"><p>Professionals in international teams navigating the invisible emotional rules that shape collaboration and conflict</p></div>
+    <div class="who-card"><p>Managers and leaders who want to understand what their teams are not saying, and why</p></div>
+    <div class="who-card"><p>Anyone who has wondered whether the difficulty is a communication problem, a cultural problem, or something deeper</p></div>
+  </div>
+  <p style="margin-top:28px;font-size:15px;font-style:italic;font-family:'Playfair Display',serif;">This is not a book about how to adapt better. It is a book about understanding what adaptation costs, and what it should never cost.</p>
+</div>
+
+<!-- AUTHOR -->
+<section class="author-section">
+  <p class="author-name">Teresa Simone</p>
+  <p class="author-title" style="letter-spacing:0.10em;">Operations professional · Italian in Denmark · 20 years</p>
+  <div class="thesis-badge">"The Distress of the Happy Civilisation: Consensus and the Suppression of Conflict in the Scandinavian Model"<br><span style="font-size:12px;font-style:normal;color:var(--gold);letter-spacing:0.06em;">Thesis in Cultural Anthropology</span></div>
+  <p style="max-width:480px;margin:0 auto 14px;">I wrote this book from the inside. Not as an observer of Danish culture, but as someone who has lived within it for nearly twenty years, working, studying, raising a child, and slowly learning to read the emotional system underneath the social harmony.</p>
+  <p style="max-width:480px;margin:0 auto;">My goal is to help people and companies build spaces where belonging does not mean becoming smaller.</p>
+</section>
+
+<!-- PRICING -->
+<div class="pricing">
+  <h2>Get the book</h2>
+  <p>For internationals, professionals, and anyone navigating the emotional complexity of cross-cultural life.</p>
+  <div class="price">€19,99</div>
+  <p class="price-note">PDF, instant download</p>
+  <a href="https://payhip.com/b/PMjqB" class="btn">Download now</a>
+  <p class="tagline">One conversation at a time.</p>
+</div>
+
+</body>
+</html>
